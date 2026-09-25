@@ -7,7 +7,7 @@ class Everett < Formula
   sha256 "9415fd959715b471f4e5e3cab75355fb01eecc227c7ad8855ea4da66e2272644"
   license "MIT"
 
-  depends_on "python@3.13"
+  depends_on "python@3.14"
 
   def install
     virtualenv_install_with_resources
