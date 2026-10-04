@@ -3,8 +3,8 @@ class Everett < Formula
 
   desc "Layer above every coding-agent session on your machine"
   homepage "https://github.com/raitoxlol/everett"
-  url "https://github.com/raitoxlol/everett/archive/refs/tags/v1.2.0.tar.gz"
-  sha256 "2b18def24bbaea5a4c623604803216b4b31815d022fa65b30d8a8cfb1d70233c"
+  url "https://github.com/raitoxlol/everett/archive/refs/tags/v1.3.0.tar.gz"
+  sha256 "758fa258324c06453ca6c432154f13ab2d9fcda42cc48359677a372fd41766ea"
   license "MIT"
 
   depends_on "python@3.14"
