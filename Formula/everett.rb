@@ -1,28 +1,28 @@
 class Everett < Formula
   desc "Layer above every coding-agent session on your machine"
   homepage "https://github.com/raitoxlol/everett"
-  version "2.3.1"
+  version "2.3.2"
   license "MIT"
 
   on_macos do
     on_arm do
-      url "https://github.com/raitoxlol/everett/releases/download/v2.3.1/everett-aarch64-apple-darwin.tar.gz"
-      sha256 "d8d10cfe8463aeda3069ff0e024066345254027fa65a489ae47230330ded68f6"
+      url "https://github.com/raitoxlol/everett/releases/download/v2.3.2/everett-aarch64-apple-darwin.tar.gz"
+      sha256 "17d7f314a1a96ef553bc54c273a8e613f277603939d9f0286ef997b9bcf86040"
     end
     on_intel do
-      url "https://github.com/raitoxlol/everett/releases/download/v2.3.1/everett-x86_64-apple-darwin.tar.gz"
-      sha256 "7d9b3f8fc4fb29ca53a9022bfb4ba773d7e922900474d141e70aaa23e9436e17"
+      url "https://github.com/raitoxlol/everett/releases/download/v2.3.2/everett-x86_64-apple-darwin.tar.gz"
+      sha256 "b8c3ff05b6ae91dadde984c35909462104edd827f200b8d203f780b8e6518e63"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/raitoxlol/everett/releases/download/v2.3.1/everett-aarch64-unknown-linux-musl.tar.gz"
-      sha256 "1c3e1bdb4e405b56b4557bea50c9360d6b5899ab40dfc0e6beb4ef44a7c2da08"
+      url "https://github.com/raitoxlol/everett/releases/download/v2.3.2/everett-aarch64-unknown-linux-musl.tar.gz"
+      sha256 "92aca283d27cf543d95287e1950bded0df7b226c888ecac536bffd55ef7d4e20"
     end
     on_intel do
-      url "https://github.com/raitoxlol/everett/releases/download/v2.3.1/everett-x86_64-unknown-linux-musl.tar.gz"
-      sha256 "99a4333193969320c37b9ead7a4403d37a5c7bfa9247d3671f34534af10de2c7"
+      url "https://github.com/raitoxlol/everett/releases/download/v2.3.2/everett-x86_64-unknown-linux-musl.tar.gz"
+      sha256 "5a3e8abc24143ff3d262533ffaac60346ed03dc6149bdb6a1382157bfcee5c35"
     end
   end
 
