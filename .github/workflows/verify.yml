@@ -1,0 +1,41 @@
+name: Verify Everett installation
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  install:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [macos-latest, macos-15-intel]
+    runs-on: ${{ matrix.os }}
+    env:
+      HOMEBREW_NO_AUTO_UPDATE: "1"
+      HOMEBREW_NO_ANALYTICS: "1"
+      HOMEBREW_NO_INSTALL_CLEANUP: "1"
+      EXPECTED_VERSION: "2.3.1"
+      EXPECTED_REVISION: "37898d7e3a38a908b91fabb7015ad57185803263"
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+      - name: Install and test this formula with Homebrew
+        shell: bash
+        run: |
+          ruby -c Formula/everett.rb
+          brew tap raitoxlol/tap
+          cp Formula/everett.rb "$(brew --repo raitoxlol/tap)/Formula/everett.rb"
+          brew install raitoxlol/tap/everett
+          brew test raitoxlol/tap/everett
+          binary="$(brew --prefix raitoxlol/tap/everett)/bin/everett"
+          "$binary" --version > "$RUNNER_TEMP/everett-version.txt"
+          grep -Fx "everett $EXPECTED_VERSION" "$RUNNER_TEMP/everett-version.txt"
+          grep -Fx "revision: $EXPECTED_REVISION" "$RUNNER_TEMP/everett-version.txt"
+          grep -Fx "dirty: false" "$RUNNER_TEMP/everett-version.txt"
