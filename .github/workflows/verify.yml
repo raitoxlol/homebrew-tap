@@ -21,8 +21,8 @@ jobs:
       HOMEBREW_NO_AUTO_UPDATE: "1"
       HOMEBREW_NO_ANALYTICS: "1"
       HOMEBREW_NO_INSTALL_CLEANUP: "1"
-      EXPECTED_VERSION: "2.3.1"
-      EXPECTED_REVISION: "37898d7e3a38a908b91fabb7015ad57185803263"
+      EXPECTED_VERSION: "2.3.2"
+      EXPECTED_REVISION: "bc5fee6b699835415823c6494cdc318ce3949aa3"
     steps:
       - uses: actions/checkout@v7
         with:
