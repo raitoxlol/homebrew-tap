@@ -1,8 +1,8 @@
 class Teresis < Formula
   desc "Local, zero-dependency long-term memory for AI agents"
   homepage "https://www.raitox.tech/teresis"
-  url "https://github.com/raitoxlol/teresis/archive/refs/tags/v0.1.0.tar.gz"
-  sha256 "7fbfa957387989e319056067ebe8b5949f30222e6be551b9faf7fc6120183a04"
+  url "https://github.com/raitoxlol/teresis/archive/refs/tags/v0.1.1.tar.gz"
+  sha256 "0220c6ca7ba1da3375306748e3a76e7c636866eabb59135f230d62d00e47d8a4"
   license "Apache-2.0"
 
   depends_on "python@3.12"
